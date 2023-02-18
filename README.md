@@ -42,3 +42,29 @@ rjs_dog({
 You may accept functions as arguments or return functions and everything will work as expected. The only caveat is that returning functions causes a slight memory leak (because there is currently no way to know when the function should be released).
 
 I'll probably fix that using the finalization registry eventually.
+
+## variadics
+Variadic arguments are represented by arrays in javascript. Simply pack the values into an array in javascript. For example:
+```go
+func myFunc(a int, b ...int) {
+	...
+}
+```
+would be called as
+```js
+myFunc(1, [2, 3, 4])
+```
+in javascript.
+
+## returning multiple values
+Similar to variadics, go functions that return multiple values will return an array in javascript. For example:
+```go
+func myFunc() (a int, b string) {
+	...
+}
+```
+would be used as
+```js
+const [a, b] = myFunc()
+```
+in javascript.
