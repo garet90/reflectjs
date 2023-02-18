@@ -1,6 +1,6 @@
 //go:build js && wasm
 
-package sus
+package reflectjs
 
 import (
 	"fmt"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	reflectjs "github.com/garet90/reflectjs"
+	"github.com/garet90/reflectjs"
 	"log"
 	"syscall/js"
 )
