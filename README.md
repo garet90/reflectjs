@@ -39,6 +39,6 @@ rjs_dog({
 ```
 
 ## returning functions / accepting functions as arguments
-You may accept functions as arguments or return functions and everything will work as expected. The only caveat is that returning functions causes a slight memory leak (because there is currently no way to know when the function should be released), so avoid it where possible.
+You may accept functions as arguments or return functions and everything will work as expected. The only caveat is that returning functions causes a slight memory leak (because there is currently no way to know when the function should be released).
 
 I'll probably fix that using the finalization registry eventually.
